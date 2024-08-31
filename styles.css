@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column; /* Располагаем карточки вертикально */
+    gap: 20px;
+    align-items: center; /* Центрируем карточки по горизонтали */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .user-info {
+    padding: 15px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.card:hover {
+    transform: scale(1.3); /* Увеличиваем карточку в 1.3 раза */
+    z-index: 10; /* Перемещаем карточку на передний план */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card:not(:hover) {
+    transform: scale(1); /* Оставляем другие карточки в обычном размере */
+    z-index: 1; /* Остальные карточки остаются на обычном уровне */
+}
